@@ -798,3 +798,134 @@ ul {
     text-align: center;
   }
 }
+/* =========================
+   FIX FORMULARIO CONTACTO
+========================= */
+
+.contact-box {
+  padding: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 24px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--glass-shadow);
+}
+
+.contact-form {
+  width: 100%;
+  display: grid;
+  gap: 18px;
+}
+
+.form-group {
+  width: 100%;
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  display: block;
+  padding: 15px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s ease;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(148, 163, 184, 0.75);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.10);
+}
+
+.form-button {
+  width: 100%;
+  padding: 15px 22px;
+  border: none;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #020617;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 12px 32px rgba(56, 189, 248, 0.25);
+}
+
+.form-button:hover {
+  background: #7dd3fc;
+  transform: translateY(-3px);
+}
+
+/* Oculta el campo anti-spam */
+.hidden-field {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.contact-socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-socials .contact-link {
+  padding: 15px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s ease;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.contact-socials .contact-link:hover {
+  color: var(--primary);
+  border-color: rgba(125, 211, 252, 0.38);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .contact-socials {
+    grid-template-columns: 1fr;
+  }
+}
