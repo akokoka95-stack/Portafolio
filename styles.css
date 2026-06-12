@@ -929,3 +929,87 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   FIX DEFINITIVO FORMULARIO
+========================= */
+
+.contact-box form {
+  width: 100%;
+  display: grid !important;
+  gap: 18px !important;
+}
+
+.contact-box form div {
+  width: 100%;
+  display: grid !important;
+  gap: 8px !important;
+}
+
+.contact-box form label {
+  display: block !important;
+  color: var(--text) !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+}
+
+.contact-box form input:not([type="hidden"]):not([name="_gotcha"]),
+.contact-box form textarea {
+  width: 100% !important;
+  display: block !important;
+  padding: 15px 16px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 16px !important;
+  color: var(--text) !important;
+  font-family: inherit !important;
+  font-size: 0.95rem !important;
+  outline: none !important;
+  transition: 0.3s ease !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+.contact-box form textarea {
+  min-height: 150px !important;
+  resize: vertical !important;
+}
+
+.contact-box form input::placeholder,
+.contact-box form textarea::placeholder {
+  color: rgba(148, 163, 184, 0.75) !important;
+}
+
+.contact-box form input:focus,
+.contact-box form textarea:focus {
+  border-color: rgba(56, 189, 248, 0.55) !important;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.10) !important;
+}
+
+.contact-box form button {
+  width: 100% !important;
+  padding: 15px 22px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  background: var(--primary) !important;
+  color: #020617 !important;
+  font-family: inherit !important;
+  font-size: 0.95rem !important;
+  font-weight: 900 !important;
+  cursor: pointer !important;
+  transition: 0.3s ease !important;
+  box-shadow: 0 12px 32px rgba(56, 189, 248, 0.25) !important;
+}
+
+.contact-box form button:hover {
+  background: #7dd3fc !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Ocultar campo anti-spam aunque la clase no funcione */
+.contact-box form input[name="_gotcha"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
