@@ -6,10 +6,13 @@
 
   <title>Oscar Cosio | Front-End Developer</title>
 
-  <!-- Fuente opcional de Google Fonts -->
+  <!-- Fuente de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" 
+    rel="stylesheet"
+  >
 
   <!-- Archivo CSS -->
   <link rel="stylesheet" href="styles.css" />
@@ -33,8 +36,10 @@
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
+
+    <!-- HERO -->
     <section id="inicio" class="hero section">
       <div class="container hero-content">
 
@@ -252,27 +257,94 @@
           <p class="section-subtitle">Contacto</p>
           <h2>¿Tienes una idea? Construyamos algo juntos.</h2>
           <p>
-            Estoy disponible para proyectos freelance pequeños, landing pages,
-            portafolios y sitios web básicos para negocios.
+            Cuéntame sobre tu proyecto y me pondré en contacto contigo.
+            Puedo ayudarte con landing pages, portafolios y sitios web básicos.
           </p>
         </div>
 
         <div class="contact-box">
-          <a href="mailto:akokoka95@gmail.com" class="contact-link">
-            akokoka95@gmail.com
-          </a>
+          <form 
+            action="https://formspree.io/f/mdavwdyv" 
+            method="POST" 
+            class="contact-form"
+          >
+            <input 
+              type="hidden" 
+              name="_subject" 
+              value="Nuevo mensaje desde el portafolio de Oscar"
+            >
 
-          <a href="https://www.linkedin.com/in/oscar-cosio/" target="_blank" class="contact-link">
-            LinkedIn
-          </a>
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Tu nombre" 
+                required
+              >
+            </div>
 
-          <a href="https://github.com/akokoka95-stack/Portafolio" target="_blank" class="contact-link">
-            GitHub
-          </a>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="tu@email.com" 
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="6" 
+                placeholder="Cuéntame sobre tu proyecto..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Campo oculto anti-spam -->
+            <input 
+              type="text" 
+              name="_gotcha" 
+              class="hidden-field"
+              tabindex="-1"
+              autocomplete="off"
+            >
+
+            <button type="submit" class="form-button">
+              Enviar mensaje
+            </button>
+          </form>
+
+          <div class="contact-socials">
+            <a 
+              href="https://www.linkedin.com/in/oscar-cosio/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="contact-link"
+            >
+              LinkedIn
+            </a>
+
+            <a 
+              href="https://github.com/akokoka95-stack" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="contact-link"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
 
       </div>
     </section>
+
   </main>
 
   <!-- FOOTER -->
